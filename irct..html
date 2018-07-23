@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<title>my irctc site</title>
+<link type="text/css" rel="stylesheet"  href="irctccss.css"></link>
+<script>
+function fun1()
+{
+var x=confirm("Enter all the valid details")
+}
+function fun2()
+{
+ var date=document.getElementById("date").value;
+var nam=document.getElementById("name");
+if(date[0]>3 || date[2]!='/'|| date[3]>1||date[5]!='/')
+return false;
+else if(nam.value.length()==0)
+return false;
+else
+ return true;
+}
+</script>
+</head>
+<body>
+<h1>welcome to online ticket booking site</h1>
+<button onclick="fun1()">Book ticket</button>
+</br>
+</br>
+<form action="irctc.php" method="post">
+Name  <input type="text" id="name"/>
+</br>
+</br>
+Age    <input type="text"/>
+</br>
+</br>
+Gender <input type ="radio"/>M<input type ="radio" />F
+</br>
+</br>
+From  <select>
+<option>lko</option>
+<option>delhi</option>
+<option>patna</option>
+<option>kerla</option>
+<option>jaipur</option>
+<option>agra</option>
+<option>gorakhpur</option>
+<option>tamil nadu</option>
+<option>karnatak</option>
+<option>orissa</option>
+</select>
+TO  <select>
+<option>lko</option>
+<option>delhi</option>
+<option>patna</option>
+<option>kerla</option>
+<option>jaipur</option>
+<option>agra</option>
+<option>gorakhpur</option>
+<option>tamil nadu</option>
+<option>karnatak</option>
+<option>orissa</option>
+</select>
+</br>
+</br>
+date of journey<input type="text" id="date"/>
+</br>
+</br>
+<input type="submit" onsubmit="return fun2()"/>
+<input type="reset"/>
+</form>
+
+</body>
+</html>
